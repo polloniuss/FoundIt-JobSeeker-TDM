@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar>
+
+  <action name="top">
+    <one-of>
+      <item>main menu</item>
+      <item>top</item>
+      <item>beginning</item>
+      <item>cancel</item>
+      <item>forget it</item>
+      <item>never mind</item>
+      <item>abort</item>
+    </one-of>
+  </action>
+
+  <action name="up">
+    <one-of>
+      <item>up</item>
+      <item>back</item>
+      <item>go back</item>
+    </one-of>
+  </action>
+
+  <question speaker="all" predicate="job_seeker">
+    find a job
+  </question>
+
+  <question speaker="all" predicate="job_application">
+    apply to a job
+  </question>
+
+  <question speaker="user" predicate="job_seeker" type="wh_question">
+    <one-of>
+      <item>I need a job</item>
+      <item>I want to find a job</item>
+      <item>I want to see jobs sorted by <slot predicate="extra_info_to_search"/></item>
+      <item>I wonder what are the job opportunities in <slot predicate="city_to_search"/></item>
+      <item>I wonder what are the job opportunities in <slot predicate="contract_to_search"/> in <slot predicate="city_to_search"/> in <slot predicate="country_to_search"/></item>
+      <item>I need a <slot predicate="contract_to_search"/> in <slot predicate="field_to_search"/></item>
+      <item>I want a <slot predicate="contract_to_search"/> in <slot predicate="city_to_search"/> in <slot predicate="field_to_search"/></item>
+    </one-of>
+  </question>
+
+  <action name="job_application">
+    <one-of>
+      <item>I want to apply</item>
+      <item>I want to make an application</item>
+      <item>can you send my application</item>
+    </one-of>
+  </action>
+
+  <question speaker="system" predicate="field_to_search" type="wh_question">
+    which field
+  </question>
+
+  <question speaker="system" predicate="country_to_search" type="wh_question">
+    which country
+  </question>
+
+  <question speaker="system" predicate="city_to_search" type="wh_question">
+    which city
+  </question>
+
+  <question speaker="system" predicate="contract_to_search" type="wh_question">
+    which contract
+  </question>
+
+  <question type="wh_question" speaker="all" predicate="extra_info_to_search">
+    extra information
+  </question>
+
+  <answer speaker="system" predicate="job_seeker">
+    The job opportunities are <slot predicate="job_seeker"/>
+  </answer>
+
+  <report action="job_application" status="ended">
+    Your application has been sent
+  </report>
+
+  <individual name="field_computer">computer science</individual>
+  <individual name="field_linguistic">linguistic</individual>
+  <individual name="field_electrical">electrical engineering</individual>
+  <individual name="field_chemistry">chemistry</individual>
+  <individual name="field_biology">biology</individual>
+
+  <individual name="country_uk">UK</individual>
+  <individual name="country_france">France</individual>
+  <individual name="country_spain">Spain</individual>
+  <individual name="country_germany">Germany</individual>
+  <individual name="country_sweden">Sweden</individual>
+
+  <individual name="city_london">London</individual>
+  <individual name="city_paris">Paris</individual>
+  <individual name="city_madrid">Madrid</individual>
+  <individual name="city_berlin">Berlin</individual>
+  <individual name="city_stockholm">Stockholm</individual>
+
+  <individual name="contract_short">part time</individual>
+  <individual name="contract_long">full time</individual>
+  <individual name="contract_seasonal">temporary</individual>
+  <individual name="contract_internship">internship</individual>
+  <individual name="contract_all">contract</individual>
+  <individual name="contract_optional">I don't mind</individual>
+
+  <individual name="extra_info_to_search_date">date</individual>
+  <individual name="extra_info_to_search_relevance">relevance</individual>
+
+</grammar>

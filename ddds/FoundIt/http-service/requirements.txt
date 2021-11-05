@@ -1,0 +1,7 @@
+Flask[async]==2.0.1
+gevent==21.8.0
+gunicorn==20.1.0
+python-Levenshtein==0.12.2
+structlog==21.1.0
+requests==2.26.0
+google-search-results==2.4.0

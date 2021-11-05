@@ -1,0 +1,472 @@
+language: "en"
+
+pipeline:
+  - name: WhitespaceTokenizer
+    case_sensitive: False
+  - name: LanguageModelFeaturizer
+    model_name: "bert"
+    model_weights: "bert-base-uncased"
+    cache_dir: lfs
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+#  - name: DucklingEntityExtractor
+#    url: "http://duckling:8000"
+#    dimensions: []  # Add dimensions if the DDD has built-in the sorts integer or datetime e.g. ["number", "time"]
+  - name: RegexEntityExtractor
+    # text will be processed with case insensitive as default
+    case_sensitive: False
+    # use lookup tables to extract entities
+    use_lookup_tables: True
+    # use regexes to extract entities
+    use_regexes: True
+    # use match word boundaries for lookup table
+    # needs to be "False" for languages like Chinese
+    "use_word_boundaries": True
+  - name: EntitySynonymMapper
+version: "2.0"
+
+nlu:
+- intent: FoundIt:action::job_application
+  examples: |
+    - I want to apply
+    - I want to make an application
+    - can you send my application
+
+- intent: FoundIt:question::job_seeker
+  examples: |
+    - I need a job
+    - I want to find a job
+    - I want to see jobs sorted by [date](FoundIt.sort.extra_info)
+    - I want to see jobs sorted by [relevance](FoundIt.sort.extra_info)
+    - I wonder what are the job opportunities in [Berlin](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [London](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Madrid](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Paris](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Stockholm](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [I don't mind](FoundIt.sort.contract) in [Berlin](FoundIt.sort.city) in [Sweden](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [contract](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [Sweden](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [full time](FoundIt.sort.contract) in [Stockholm](FoundIt.sort.city) in [Spain](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [internship](FoundIt.sort.contract) in [Madrid](FoundIt.sort.city) in [Germany](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [part time](FoundIt.sort.contract) in [Berlin](FoundIt.sort.city) in [Sweden](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [temporary](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [UK](FoundIt.sort.country)
+    - I need a [I don't mind](FoundIt.sort.contract) in [chemistry](FoundIt.sort.field)
+    - I need a [contract](FoundIt.sort.contract) in [computer science](FoundIt.sort.field)
+    - I need a [full time](FoundIt.sort.contract) in [electrical engineering](FoundIt.sort.field)
+    - I need a [internship](FoundIt.sort.contract) in [linguistic](FoundIt.sort.field)
+    - I need a [part time](FoundIt.sort.contract) in [chemistry](FoundIt.sort.field)
+    - I need a [temporary](FoundIt.sort.contract) in [electrical engineering](FoundIt.sort.field)
+    - I want a [I don't mind](FoundIt.sort.contract) in [Madrid](FoundIt.sort.city) in [electrical engineering](FoundIt.sort.field)
+    - I want a [contract](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [computer science](FoundIt.sort.field)
+    - I want a [full time](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [chemistry](FoundIt.sort.field)
+    - I want a [internship](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [electrical engineering](FoundIt.sort.field)
+    - I want a [part time](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [linguistic](FoundIt.sort.field)
+    - I want a [temporary](FoundIt.sort.contract) in [Stockholm](FoundIt.sort.city) in [computer science](FoundIt.sort.field)
+
+- intent: FoundIt:answer
+  examples: |
+    - [London](FoundIt.sort.city)
+    - [Paris](FoundIt.sort.city)
+    - [Madrid](FoundIt.sort.city)
+    - [Berlin](FoundIt.sort.city)
+    - [Stockholm](FoundIt.sort.city)
+    - [part time](FoundIt.sort.contract)
+    - [full time](FoundIt.sort.contract)
+    - [temporary](FoundIt.sort.contract)
+    - [contract](FoundIt.sort.contract)
+    - [internship](FoundIt.sort.contract)
+    - [I don't mind](FoundIt.sort.contract)
+    - [UK](FoundIt.sort.country)
+    - [France](FoundIt.sort.country)
+    - [Spain](FoundIt.sort.country)
+    - [Germany](FoundIt.sort.country)
+    - [Sweden](FoundIt.sort.country)
+    - [date](FoundIt.sort.extra_info)
+    - [relevance](FoundIt.sort.extra_info)
+    - [computer science](FoundIt.sort.field)
+    - [linguistic](FoundIt.sort.field)
+    - [electrical engineering](FoundIt.sort.field)
+    - [chemistry](FoundIt.sort.field)
+    - [biology](FoundIt.sort.field)
+    - [single](FoundIt.sort.string)
+    - [double word](FoundIt.sort.string)
+    - [three in one](FoundIt.sort.string)
+    - [hey make it four](FoundIt.sort.string)
+    - [the more the merrier five](FoundIt.sort.string)
+    - [calm down and count to six](FoundIt.sort.string)
+    - [bring them through to the jolly seven](FoundIt.sort.string)
+    - [noone counts toes like an eight toed guy](FoundIt.sort.string)
+    - [it matters to make sense for nine of us](FoundIt.sort.string)
+    - [would you bring ten or none to a desert island](FoundIt.sort.string)
+    - yes [London](FoundIt.sort.city)
+    - yes [I don't mind](FoundIt.sort.contract)
+    - yes [electrical engineering](FoundIt.sort.field)
+    - yes [noone counts toes like an eight toed guy](FoundIt.sort.string)
+    - no [Paris](FoundIt.sort.city)
+    - no [UK](FoundIt.sort.country)
+    - no [chemistry](FoundIt.sort.field)
+    - no [it matters to make sense for nine of us](FoundIt.sort.string)
+
+- intent: FoundIt:answer_negation
+  examples: |
+    - not [London](FoundIt.sort.city)
+    - not [Paris](FoundIt.sort.city)
+    - not [Madrid](FoundIt.sort.city)
+    - not [Berlin](FoundIt.sort.city)
+    - not [Stockholm](FoundIt.sort.city)
+    - not [part time](FoundIt.sort.contract)
+    - not [full time](FoundIt.sort.contract)
+    - not [temporary](FoundIt.sort.contract)
+    - not [contract](FoundIt.sort.contract)
+    - not [internship](FoundIt.sort.contract)
+    - not [I don't mind](FoundIt.sort.contract)
+    - not [UK](FoundIt.sort.country)
+    - not [France](FoundIt.sort.country)
+    - not [Spain](FoundIt.sort.country)
+    - not [Germany](FoundIt.sort.country)
+    - not [Sweden](FoundIt.sort.country)
+    - not [date](FoundIt.sort.extra_info)
+    - not [relevance](FoundIt.sort.extra_info)
+    - not [computer science](FoundIt.sort.field)
+    - not [linguistic](FoundIt.sort.field)
+    - not [electrical engineering](FoundIt.sort.field)
+    - not [chemistry](FoundIt.sort.field)
+    - not [biology](FoundIt.sort.field)
+
+- intent: NEGATIVE
+  examples: |
+    - aboard
+    - about
+    - above
+    - across
+    - after
+    - against
+    - along
+    - among
+    - as
+    - at
+    - on
+    - atop
+    - before
+    - behind
+    - below
+    - beneath
+    - beside
+    - between
+    - beyond
+    - but
+    - by
+    - come
+    - down
+    - during
+    - except
+    - for
+    - from
+    - in
+    - inside
+    - into
+    - less
+    - like
+    - near
+    - of
+    - off
+    - on
+    - onto
+    - opposite
+    - out
+    - outside
+    - over
+    - past
+    - save
+    - short
+    - since
+    - than
+    - then
+    - through
+    - throughout
+    - to
+    - toward
+    - under
+    - underneath
+    - unlike
+    - until
+    - up
+    - upon
+    - with
+    - within
+    - without
+    - worth
+    - is
+    - it
+    - the
+    - a
+    - am
+    - are
+    - them
+    - this
+    - that
+    - I
+    - you
+    - he
+    - she
+    - they
+    - them
+    - his
+    - her
+    - my
+    - mine
+    - their
+    - your
+    - us
+    - our
+    - how
+    - how's
+    - how is
+    - how's the
+    - how is the
+    - when
+    - when's
+    - when is
+    - when is the
+    - when's the
+    - what
+    - what is
+    - what's
+    - what's the
+    - what is the
+    - why
+    - why is
+    - why's
+    - why is the
+    - why's the
+    - do
+    - make
+    - tell
+    - start
+    - stop
+    - enable
+    - disable
+    - raise
+    - lower
+    - decrease
+    - increase
+    - act
+    - determine
+    - say
+    - ask
+    - go
+    - shoot
+    - wait
+    - hang on
+    - ok
+    - show
+    - help
+
+- intent: answer:yes
+  examples: |
+    - yes
+    - yeah
+    - yep
+    - sure
+    - ok
+    - of course
+    - very well
+    - fine
+    - right
+    - excellent
+    - okay
+    - perfect
+    - I think so
+
+- intent: answer:no
+  examples: |
+    - no
+    - nope
+    - no thanks
+    - no thank you
+    - negative
+    - don't want to
+    - don't
+    - do not
+    - please don't
+
+- intent: request:top
+  examples: |
+    - forget it
+    - never mind
+    - get me out of here
+    - start over
+    - beginning
+    - never mind that
+    - restart
+
+- intent: request:up
+  examples: |
+    - go back
+    - back
+    - previous
+    - back to the previous
+    - go to the previous
+    - go back to the previous one
+
+- intent: request:how
+  examples: |
+    - how do I do that
+    - how
+    - can you tell me how to do that
+    - I don't know how should I do that
+    - how can I do that
+
+- intent: report:done
+  examples: |
+    - I'm done
+    - done
+    - ready
+    - it's ready
+    - I'm ready
+    - completed
+    - check
+    - I have finished
+    - finished
+    - done and done
+    - it's done now
+    - okay next
+    - next
+    - next instruction
+
+- intent: icm:per*neg
+  examples: |
+    - repeat
+    - repeat it
+    - repeat that
+    - pardon
+    - sorry
+    - can you repeat that
+    - excuse me
+    - what was that
+    - what did you say
+    - come again
+
+- intent: icm:acc*neg:issue
+  examples: |
+    - I don't know
+    - I don't know that
+    - it doesn't matter
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thank you very much
+    - thanks
+    - big thanks
+    - thanks a lot
+
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - good day
+    - what's up
+    - good evening
+    - good morning
+    - hey
+
+- synonym: FoundIt:city_london
+  examples: |
+    - London
+
+- synonym: FoundIt:city_paris
+  examples: |
+    - Paris
+
+- synonym: FoundIt:city_madrid
+  examples: |
+    - Madrid
+
+- synonym: FoundIt:city_berlin
+  examples: |
+    - Berlin
+
+- synonym: FoundIt:city_stockholm
+  examples: |
+    - Stockholm
+
+- synonym: FoundIt:contract_short
+  examples: |
+    - part time
+
+- synonym: FoundIt:contract_long
+  examples: |
+    - full time
+
+- synonym: FoundIt:contract_seasonal
+  examples: |
+    - temporary
+
+- synonym: FoundIt:contract_all
+  examples: |
+    - contract
+
+- synonym: FoundIt:contract_internship
+  examples: |
+    - internship
+
+- synonym: FoundIt:contract_optional
+  examples: |
+    - I don't mind
+
+- synonym: FoundIt:country_uk
+  examples: |
+    - UK
+
+- synonym: FoundIt:country_france
+  examples: |
+    - France
+
+- synonym: FoundIt:country_spain
+  examples: |
+    - Spain
+
+- synonym: FoundIt:country_germany
+  examples: |
+    - Germany
+
+- synonym: FoundIt:country_sweden
+  examples: |
+    - Sweden
+
+- synonym: FoundIt:extra_info_to_search_date
+  examples: |
+    - date
+
+- synonym: FoundIt:extra_info_to_search_relevance
+  examples: |
+    - relevance
+
+- synonym: FoundIt:field_computer
+  examples: |
+    - computer science
+
+- synonym: FoundIt:field_linguistic
+  examples: |
+    - linguistic
+
+- synonym: FoundIt:field_electrical
+  examples: |
+    - electrical engineering
+
+- synonym: FoundIt:field_chemistry
+  examples: |
+    - chemistry
+
+- synonym: FoundIt:field_biology
+  examples: |
+    - biology
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain name="FoundItDomain" is_super_domain="true">
+  <goal type="perform" action="top">
+    <plan>
+      <forget_all/>
+      <findout type="goal"/>
+    </plan>
+  </goal>
+
+  <goal type="perform" action="job_application">
+    <plan>
+      <findout type="wh_question" predicate="country_to_search"/>
+      <invoke_service_action name="job_application" postconfirm="true"/>
+    </plan>
+  </goal>
+
+  <goal type="resolve" predicate="job_seeker">
+    <plan>
+      <findout type="wh_question" predicate="field_to_search"/>
+      <findout type="wh_question" predicate="country_to_search"/>
+      <findout type="wh_question" predicate="city_to_search"/>
+      <findout type="wh_question" predicate="contract_to_search"/>
+      <bind type="wh_question" predicate="extra_info_to_search"/>
+      <invoke_service_query predicate="job_seeker"/>
+    </plan>
+  </goal>
+
+</domain>

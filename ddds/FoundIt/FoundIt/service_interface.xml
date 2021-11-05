@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service_interface>
+
+    <action name="job_application">
+        <parameters>
+            <parameter predicate="country_to_search" format="grammar_entry"/>
+        </parameters>
+        <failure_reasons/>
+        <target>
+            <http endpoint="http://http-service/action_success_response"/>
+        </target>
+    </action>
+
+    <query name="job_seeker">
+        <parameters>
+            <parameter predicate="field_to_search" format="grammar_entry"/>
+            <parameter predicate="country_to_search" format="grammar_entry"/>
+            <parameter predicate="city_to_search" format="grammar_entry"/>
+            <parameter predicate="contract_to_search" format="grammar_entry"/>
+            <parameter predicate="extra_info_to_search" format="grammar_entry" optional="true"/>
+        </parameters>
+        <target>
+            <http endpoint="http://http-service/job_seeker"/>
+        </target>
+    </query>
+
+</service_interface>

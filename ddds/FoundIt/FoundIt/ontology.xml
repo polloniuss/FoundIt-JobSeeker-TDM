@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ontology name="FoundItOntology">
+
+    <sort name="field" dynamic="true"/>
+    <sort name="country" dynamic="true"/>
+    <sort name="city" dynamic="true"/>
+    <sort name="contract" dynamic="true"/>
+    <sort name="extra_info" dynamic="true"/>
+
+    <predicate name="field_to_search" sort="field"/>
+    <predicate name="country_to_search" sort="country"/>
+    <predicate name="city_to_search" sort="city"/>
+    <predicate name="contract_to_search" sort="contract"/>
+    <predicate name="extra_info_to_search" sort="extra_info"/>
+
+    <predicate name="job_seeker" sort="string"/>
+    <action name="job_application"/>
+
+
+    <individual name="field_computer" sort="field"/>
+    <individual name="field_linguistic" sort="field"/>
+    <individual name="field_electrical" sort="field"/>
+    <individual name="field_chemistry" sort="field"/>
+    <individual name="field_biology" sort="field"/>
+
+    <individual name="country_uk" sort="country"/>
+    <individual name="country_france" sort="country"/>
+    <individual name="country_spain" sort="country"/>
+    <individual name="country_germany" sort="country"/>
+    <individual name="country_sweden" sort="country"/>
+
+    <individual name="city_london" sort="city"/>
+    <individual name="city_paris" sort="city"/>
+    <individual name="city_madrid" sort="city"/>
+    <individual name="city_berlin" sort="city"/>
+    <individual name="city_stockholm" sort="city"/>
+
+    <individual name="contract_short" sort="contract"/>
+    <individual name="contract_long" sort="contract"/>
+    <individual name="contract_seasonal" sort="contract"/>
+    <individual name="contract_all" sort="contract"/>
+    <individual name="contract_internship" sort="contract"/>
+    <individual name="contract_optional" sort="contract"/>
+
+    <individual name="extra_info_to_search_date" sort="extra_info"/>
+    <individual name="extra_info_to_search_relevance" sort="extra_info"/>
+
+</ontology>

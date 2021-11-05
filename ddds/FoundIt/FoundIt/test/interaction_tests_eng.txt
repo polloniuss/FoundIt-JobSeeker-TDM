@@ -1,0 +1,42 @@
+--- main menu
+S> What would you like to do?
+
+--- job seeker (incremental)
+S> What would you like to do?
+U> I need a job
+S> Which field?
+U> computer science
+S> Which country?
+U> France
+S> Which city?
+U> Paris
+S> Which contract?
+U> full time
+S> The job opportunities are *
+
+--- job seeker (over answering)
+S> What would you like to do?
+U> I need a internship in linguistic           
+S> Which country?
+U> France    
+S> Which city?
+U> Paris  
+S> The job opportunities are *
+
+--- job seeker (one-shot)
+S> What would you like to do?
+U> I want a full time in Paris in France in electrical engineering
+S> The job opportunities are *
+
+--- extra info (one-shot)
+S> What would you like to do?
+U> I want to see jobs sorted by date
+S> Which field?
+U> computer science
+S> Which country?
+U> France    
+S> Which city?
+U> Paris  
+S> Which contract?
+U> full time
+S> The job opportunities are *
