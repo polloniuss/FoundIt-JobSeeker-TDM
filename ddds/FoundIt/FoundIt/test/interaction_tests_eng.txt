@@ -12,7 +12,7 @@ S> Which city?
 U> Paris
 S> Which contract?
 U> full time
-S> The job opportunities are *
+S> Found It! Here are the best job opportunities I found for you. *
 
 --- job seeker (over answering)
 S> What would you like to do?
@@ -21,22 +21,22 @@ S> Which country?
 U> France    
 S> Which city?
 U> Paris  
-S> The job opportunities are *
+S> Found It! Here are the best job opportunities I found for you. *
 
---- job seeker (one-shot)
+--- job seeker (one-shot) impossible
 S> What would you like to do?
 U> I want a full time in Paris in France in electrical engineering
-S> The job opportunities are *
+S> Found It! Here are the best job opportunities I found for you. *
 
 --- extra info (one-shot)
 S> What would you like to do?
-U> I want to see jobs sorted by date
+U> I want to see jobs remotely
 S> Which field?
-U> computer science
+U> linguistic
 S> Which country?
-U> France    
+U> France
 S> Which city?
-U> Paris  
+U> Paris
 S> Which contract?
-U> full time
-S> The job opportunities are *
+U> internship
+S> Found It! Here are the best job opportunities I found for you.*

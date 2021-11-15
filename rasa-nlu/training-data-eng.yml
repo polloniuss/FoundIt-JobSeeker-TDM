@@ -10,32 +10,63 @@ nlu:
 - intent: FoundIt:question::job_seeker
   examples: |
     - I need a job
+    - job
+    - work
+    - to work
+    - do you have any job for me
+    - working
+    - jobs
+    - find me a job
+    - what are the jobs available for me
+    - I need money
+    - please help me finding a job
+    - I want to work somewhere
+    - is there any job opportunity
+    - I need a [I don't mind](FoundIt.sort.contract)
+    - I need a [contract](FoundIt.sort.contract)
+    - I need a [full time](FoundIt.sort.contract)
+    - I need a [internship](FoundIt.sort.contract)
+    - I need a [part time](FoundIt.sort.contract)
+    - I need a [temporary](FoundIt.sort.contract)
+    - find a job
+    - I'm looking for a job'
+    - I want to work in [Berlin](FoundIt.sort.city)
+    - I want to work in [London](FoundIt.sort.city)
+    - I want to work in [Madrid](FoundIt.sort.city)
+    - I want to work in [Paris](FoundIt.sort.city)
+    - I want to work in [Stockholm](FoundIt.sort.city)
+    - is there jobs in [anything](FoundIt.sort.field)
+    - is there jobs in [biology](FoundIt.sort.field)
+    - is there jobs in [chemistry](FoundIt.sort.field)
+    - is there jobs in [computer science](FoundIt.sort.field)
+    - is there jobs in [electrical engineering](FoundIt.sort.field)
+    - is there jobs in [linguistic](FoundIt.sort.field)
     - I want to find a job
-    - I want to see jobs sorted by [date](FoundIt.sort.extra_info)
-    - I want to see jobs sorted by [relevance](FoundIt.sort.extra_info)
+    - I want to see jobs [date](FoundIt.sort.extra_info)
+    - I want to see jobs [remotely](FoundIt.sort.extra_info)
     - I wonder what are the job opportunities in [Berlin](FoundIt.sort.city)
     - I wonder what are the job opportunities in [London](FoundIt.sort.city)
     - I wonder what are the job opportunities in [Madrid](FoundIt.sort.city)
     - I wonder what are the job opportunities in [Paris](FoundIt.sort.city)
     - I wonder what are the job opportunities in [Stockholm](FoundIt.sort.city)
-    - I wonder what are the job opportunities in [I don't mind](FoundIt.sort.contract) in [Berlin](FoundIt.sort.city) in [Sweden](FoundIt.sort.country)
-    - I wonder what are the job opportunities in [contract](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [Sweden](FoundIt.sort.country)
-    - I wonder what are the job opportunities in [full time](FoundIt.sort.contract) in [Stockholm](FoundIt.sort.city) in [Spain](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [I don't mind](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [UK](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [contract](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [Spain](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [full time](FoundIt.sort.contract) in [Berlin](FoundIt.sort.city) in [Spain](FoundIt.sort.country)
     - I wonder what are the job opportunities in [internship](FoundIt.sort.contract) in [Madrid](FoundIt.sort.city) in [Germany](FoundIt.sort.country)
-    - I wonder what are the job opportunities in [part time](FoundIt.sort.contract) in [Berlin](FoundIt.sort.city) in [Sweden](FoundIt.sort.country)
-    - I wonder what are the job opportunities in [temporary](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [UK](FoundIt.sort.country)
-    - I need a [I don't mind](FoundIt.sort.contract) in [chemistry](FoundIt.sort.field)
-    - I need a [contract](FoundIt.sort.contract) in [computer science](FoundIt.sort.field)
+    - I wonder what are the job opportunities in [part time](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [Germany](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [temporary](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [Sweden](FoundIt.sort.country)
+    - I need a [I don't mind](FoundIt.sort.contract) in [anything](FoundIt.sort.field)
+    - I need a [contract](FoundIt.sort.contract) in [chemistry](FoundIt.sort.field)
     - I need a [full time](FoundIt.sort.contract) in [electrical engineering](FoundIt.sort.field)
     - I need a [internship](FoundIt.sort.contract) in [linguistic](FoundIt.sort.field)
-    - I need a [part time](FoundIt.sort.contract) in [chemistry](FoundIt.sort.field)
+    - I need a [part time](FoundIt.sort.contract) in [computer science](FoundIt.sort.field)
     - I need a [temporary](FoundIt.sort.contract) in [electrical engineering](FoundIt.sort.field)
-    - I want a [I don't mind](FoundIt.sort.contract) in [Madrid](FoundIt.sort.city) in [electrical engineering](FoundIt.sort.field)
-    - I want a [contract](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [computer science](FoundIt.sort.field)
-    - I want a [full time](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [chemistry](FoundIt.sort.field)
-    - I want a [internship](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [electrical engineering](FoundIt.sort.field)
+    - I want a [I don't mind](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [computer science](FoundIt.sort.field)
+    - I want a [contract](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [electrical engineering](FoundIt.sort.field)
+    - I want a [full time](FoundIt.sort.contract) in [Madrid](FoundIt.sort.city) in [anything](FoundIt.sort.field)
+    - I want a [internship](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [biology](FoundIt.sort.field)
     - I want a [part time](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [linguistic](FoundIt.sort.field)
-    - I want a [temporary](FoundIt.sort.contract) in [Stockholm](FoundIt.sort.city) in [computer science](FoundIt.sort.field)
+    - I want a [temporary](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [biology](FoundIt.sort.field)
 
 - intent: FoundIt:answer
   examples: |
@@ -56,12 +87,13 @@ nlu:
     - [Germany](FoundIt.sort.country)
     - [Sweden](FoundIt.sort.country)
     - [date](FoundIt.sort.extra_info)
-    - [relevance](FoundIt.sort.extra_info)
+    - [remotely](FoundIt.sort.extra_info)
     - [computer science](FoundIt.sort.field)
     - [linguistic](FoundIt.sort.field)
     - [electrical engineering](FoundIt.sort.field)
     - [chemistry](FoundIt.sort.field)
     - [biology](FoundIt.sort.field)
+    - [anything](FoundIt.sort.field)
     - [single](FoundIt.sort.string)
     - [double word](FoundIt.sort.string)
     - [three in one](FoundIt.sort.string)
@@ -75,11 +107,11 @@ nlu:
     - yes [London](FoundIt.sort.city)
     - yes [I don't mind](FoundIt.sort.contract)
     - yes [electrical engineering](FoundIt.sort.field)
-    - yes [noone counts toes like an eight toed guy](FoundIt.sort.string)
+    - yes [bring them through to the jolly seven](FoundIt.sort.string)
     - no [Paris](FoundIt.sort.city)
     - no [UK](FoundIt.sort.country)
     - no [chemistry](FoundIt.sort.field)
-    - no [it matters to make sense for nine of us](FoundIt.sort.string)
+    - no [noone counts toes like an eight toed guy](FoundIt.sort.string)
 
 - intent: FoundIt:answer_negation
   examples: |
@@ -100,12 +132,13 @@ nlu:
     - not [Germany](FoundIt.sort.country)
     - not [Sweden](FoundIt.sort.country)
     - not [date](FoundIt.sort.extra_info)
-    - not [relevance](FoundIt.sort.extra_info)
+    - not [remotely](FoundIt.sort.extra_info)
     - not [computer science](FoundIt.sort.field)
     - not [linguistic](FoundIt.sort.field)
     - not [electrical engineering](FoundIt.sort.field)
     - not [chemistry](FoundIt.sort.field)
     - not [biology](FoundIt.sort.field)
+    - not [anything](FoundIt.sort.field)
 
 - intent: NEGATIVE
   examples: |
@@ -413,9 +446,9 @@ nlu:
   examples: |
     - date
 
-- synonym: FoundIt:extra_info_to_search_relevance
+- synonym: FoundIt:extra_info_to_search_remote
   examples: |
-    - relevance
+    - remotely
 
 - synonym: FoundIt:field_computer
   examples: |
@@ -436,5 +469,9 @@ nlu:
 - synonym: FoundIt:field_biology
   examples: |
     - biology
+
+- synonym: FoundIt:field_anything
+  examples: |
+    - anything
 
 

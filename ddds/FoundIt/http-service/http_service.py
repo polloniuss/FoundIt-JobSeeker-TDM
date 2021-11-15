@@ -184,28 +184,46 @@ def get_data(location, query):
         "q": query,
         "gl": "us",
         "hl": "en",
+        "chips": "date_posted:week",
+        "Irad": "10",
         "location": location
     }
 
     search = GoogleSearch(params)
     results = search.get_dict()
-    jobs = results["jobs_results"]
-    data = {}
-    for x in range(3):
-        data[x] = [jobs[x]["title"],jobs[x]["company_name"],jobs[x]["location"],jobs[x]["extensions"]]
-        #title = jobs[x]["title"]
-        #co_name = jobs[x]["company_name"]
-        #loc = jobs[x]["location"]
-        #extension = jobs[x]["extensions"]
-    str_result0 = ["Found It! Here are the best job opportunities I found for you. First job opportunity:",data[0][0],"for",data[0][1],"in",data[0][2],data[0][3]]
-    str_result1 = ["Second job opportunity:",data[1][0],"for",data[1][1],"in",data[1][2],data[1][3]]
-    str_result2 = ["Third job opportunity:",data[2][0],"for",data[2][1],"in",data[2][2],data[2][3]]
-    listToStr0 = ' '.join([str(elem) for elem in str_result0])
-    listToStr1 = ' '.join([str(elem) for elem in str_result1])
-    listToStr2 = ' '.join([str(elem) for elem in str_result2])
-    answer = listToStr0 + listToStr1 + listToStr2
-    print("!!!!!!!!!!!!!!!!!",answer)
-    return answer
+
+    try :            
+        jobs = results["jobs_results"]
+        data = {}
+        try :
+            for x in range(3):
+                data[x] = [jobs[x]["title"],jobs[x]["company_name"],jobs[x]["location"],jobs[x]["extensions"],jobs[x]["via"]]
+                #title = jobs[x]["title"]
+                #co_name = jobs[x]["company_name"]
+                #loc = jobs[x]["location"]
+                #extension = jobs[x]["extensions"]
+            str_result0 = [" First job opportunity:",data[0][0],"for",data[0][1],"in",data[0][2],data[0][3],". You can find this job",data[0][4]]
+            str_result1 = [". Second job opportunity:",data[1][0],"for",data[1][1],"in",data[1][2],data[1][3],". You can find this job",data[1][4]]
+            str_result2 = [". Third job opportunity:",data[2][0],"for",data[2][1],"in",data[2][2],data[2][3],". You can find this job",data[2][4],"."]
+            listToStr0 = ' '.join([str(elem) for elem in str_result0])
+            listToStr1 = ' '.join([str(elem) for elem in str_result1])
+            listToStr2 = ' '.join([str(elem) for elem in str_result2])
+            answer = listToStr0 + listToStr1 + listToStr2
+            print("!!!!!!!!???????",answer)
+            return answer
+        
+        except IndexError:
+            jobs = results["jobs_results"]
+            data = {}
+            str_result0 = [" First job opportunity:",data[0][0],"for",data[0][1],"in",data[0][2],data[0][3],". You can find this job",data[0][4]]
+            answer = ' '.join([str(elem) for elem in str_result0])
+            print("!!!!!!!!*******",answer)
+            return answer
+
+    except KeyError:
+        answer = "There is no result for this query. Try with other parameters."
+        print("??????*******",answer)
+        return answer
 
 
 @app.route("/job_seeker", methods=['POST'])
@@ -217,8 +235,15 @@ def job_seeker():
     contract = payload["context"]["facts"]["contract_to_search"]["grammar_entry"]
 
     location = city + " " + country
-    query = field + " " + contract
 
-    data = get_data(location, query)
-    return query_response(value=str(data), grammar_entry=None)
+    try:
+        option = payload["context"]["facts"]["extra_info_to_search"]["grammar_entry"]
+        query = field + " " + contract + " " + option
+        data = get_data(location, query)
+        return query_response(value=str(data), grammar_entry=None)
+
+    except KeyError:
+        query = field + " " + contract
+        data = get_data(location, query)
+        return query_response(value=str(data), grammar_entry=None)
 

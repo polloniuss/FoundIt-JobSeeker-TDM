@@ -22,6 +22,7 @@
     <individual name="field_electrical" sort="field"/>
     <individual name="field_chemistry" sort="field"/>
     <individual name="field_biology" sort="field"/>
+    <individual name="field_anything" sort="field"/>
 
     <individual name="country_uk" sort="country"/>
     <individual name="country_france" sort="country"/>
@@ -43,6 +44,6 @@
     <individual name="contract_optional" sort="contract"/>
 
     <individual name="extra_info_to_search_date" sort="extra_info"/>
-    <individual name="extra_info_to_search_relevance" sort="extra_info"/>
+    <individual name="extra_info_to_search_remote" sort="extra_info"/>
 
 </ontology>

@@ -32,8 +32,25 @@
   <question speaker="user" predicate="job_seeker" type="wh_question">
     <one-of>
       <item>I need a job</item>
+      <item>job <slot predicate="field_to_search" type="individual"/></item>
+      <item>work</item>
+      <item>to work</item>
+      <item>do you have any job for me</item>
+      <item>working</item>
+      <item>jobs</item>
+      <item>find me a job</item>
+      <item>what are the jobs available for me</item>
+      <item>I need money</item>
+      <item>please help me finding a job</item>
+      <item>I want to work somewhere</item>
+      <item>is there any job opportunity</item>
+      <item>I need a <slot predicate="contract_to_search"/></item>
+      <item>find a job</item>
+      <item>I'm looking for a job</item>
+      <item>I want to work in <slot predicate="city_to_search"/></item>
+      <item>is there jobs in <slot predicate="field_to_search"/></item>
       <item>I want to find a job</item>
-      <item>I want to see jobs sorted by <slot predicate="extra_info_to_search"/></item>
+      <item>I want to see jobs <slot predicate="extra_info_to_search"/></item>
       <item>I wonder what are the job opportunities in <slot predicate="city_to_search"/></item>
       <item>I wonder what are the job opportunities in <slot predicate="contract_to_search"/> in <slot predicate="city_to_search"/> in <slot predicate="country_to_search"/></item>
       <item>I need a <slot predicate="contract_to_search"/> in <slot predicate="field_to_search"/></item>
@@ -70,7 +87,7 @@
   </question>
 
   <answer speaker="system" predicate="job_seeker">
-    The job opportunities are <slot predicate="job_seeker"/>
+    Found It! Here are the best job opportunities I found for you. <slot predicate="job_seeker"/>
   </answer>
 
   <report action="job_application" status="ended">
@@ -82,6 +99,7 @@
   <individual name="field_electrical">electrical engineering</individual>
   <individual name="field_chemistry">chemistry</individual>
   <individual name="field_biology">biology</individual>
+  <individual name="field_anything">anything</individual>
 
   <individual name="country_uk">UK</individual>
   <individual name="country_france">France</individual>
@@ -103,6 +121,6 @@
   <individual name="contract_optional">I don't mind</individual>
 
   <individual name="extra_info_to_search_date">date</individual>
-  <individual name="extra_info_to_search_relevance">relevance</individual>
+  <individual name="extra_info_to_search_remote">remotely</individual>
 
 </grammar>
