@@ -184,8 +184,8 @@ def get_data(location, query):
         "q": query,
         "gl": "us",
         "hl": "en",
-        "chips": "date_posted:week",
-        "Irad": "10",
+        "chips": "date_posted:month",
+        "Irad": "50",
         "location": location
     }
 
@@ -197,32 +197,31 @@ def get_data(location, query):
         data = {}
         try :
             for x in range(3):
-                data[x] = [jobs[x]["title"],jobs[x]["company_name"],jobs[x]["location"],jobs[x]["extensions"],jobs[x]["via"]]
-                #title = jobs[x]["title"]
-                #co_name = jobs[x]["company_name"]
-                #loc = jobs[x]["location"]
-                #extension = jobs[x]["extensions"]
-            str_result0 = [" First job opportunity:",data[0][0],"for",data[0][1],"in",data[0][2],data[0][3],". You can find this job",data[0][4]]
-            str_result1 = [". Second job opportunity:",data[1][0],"for",data[1][1],"in",data[1][2],data[1][3],". You can find this job",data[1][4]]
-            str_result2 = [". Third job opportunity:",data[2][0],"for",data[2][1],"in",data[2][2],data[2][3],". You can find this job",data[2][4],"."]
+                extensions = ', '.join(jobs[x]["extensions"])
+                data[x] = [jobs[x]["title"],jobs[x]["company_name"],jobs[x]["location"],extensions,jobs[x]["via"]]
+
+            str_result0 = [" Best job opportunity:",data[0][0],"for",data[0][1],"in",data[0][2],",",data[0][3],". You can find this job",data[0][4]]
+
+            #Timeout error when displaying too many results:
+
+            #str_result1 = [". Second job opportunity:",data[1][0],"for",data[1][1],"in",data[1][2],",",data[1][3],". You can find this job",data[1][4]]
+            #str_result2 = [". Third job opportunity:",data[2][0],"for",data[2][1],"in",data[2][2],",",data[2][3],". You can find this job",data[2][4],"."]
             listToStr0 = ' '.join([str(elem) for elem in str_result0])
-            listToStr1 = ' '.join([str(elem) for elem in str_result1])
-            listToStr2 = ' '.join([str(elem) for elem in str_result2])
-            answer = listToStr0 + listToStr1 + listToStr2
-            print("!!!!!!!!???????",answer)
+            #listToStr1 = ' '.join([str(elem) for elem in str_result1])
+            #listToStr2 = ' '.join([str(elem) for elem in str_result2])+
+            #answer = listToStr0 + listToStr1 + listToStr2
+            answer = listToStr0
             return answer
         
         except IndexError:
             jobs = results["jobs_results"]
             data = {}
-            str_result0 = [" First job opportunity:",data[0][0],"for",data[0][1],"in",data[0][2],data[0][3],". You can find this job",data[0][4]]
+            str_result0 = [" Unique job opportunity:",data[0][0],"for",data[0][1],"in",data[0][2],data[0][3],". You can find this job",data[0][4]]
             answer = ' '.join([str(elem) for elem in str_result0])
-            print("!!!!!!!!*******",answer)
             return answer
 
     except KeyError:
         answer = "There is no result for this query. Try with other parameters."
-        print("??????*******",answer)
         return answer
 
 

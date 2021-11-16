@@ -10,7 +10,27 @@ nlu:
 - intent: FoundIt:question::job_seeker
   examples: |
     - I need a job
-    - job
+    - job [IT](FoundIt.sort.field)
+    - job [biology](FoundIt.sort.field)
+    - job [biology](FoundIt.sort.field)
+    - job [chemistry](FoundIt.sort.field)
+    - job [computational linguist](FoundIt.sort.field)
+    - job [electrical engineering](FoundIt.sort.field)
+    - job [linguistics](FoundIt.sort.field)
+    - job [programmer](FoundIt.sort.field)
+    - job [software developer](FoundIt.sort.field)
+    - job [translator](FoundIt.sort.field)
+    - job [consultant](FoundIt.sort.field)
+    - job [barista](FoundIt.sort.field)
+    - job [waiter](FoundIt.sort.field)
+    - job [fast food](FoundIt.sort.field)
+    - job [baby sitter](FoundIt.sort.field)
+    - job [coach](FoundIt.sort.field)
+    - job [robotics](FoundIt.sort.field)
+    - job [mecanics](FoundIt.sort.field)
+    - job [singer](FoundIt.sort.field)
+    - job [actor](FoundIt.sort.field)
+    - job [writer](FoundIt.sort.field)
     - work
     - to work
     - do you have any job for me
@@ -22,78 +42,300 @@ nlu:
     - please help me finding a job
     - I want to work somewhere
     - is there any job opportunity
-    - I need a [I don't mind](FoundIt.sort.contract)
-    - I need a [contract](FoundIt.sort.contract)
+    - I need a [fixed-term](FoundIt.sort.contract)
     - I need a [full time](FoundIt.sort.contract)
     - I need a [internship](FoundIt.sort.contract)
-    - I need a [part time](FoundIt.sort.contract)
+    - I need a [permanent](FoundIt.sort.contract)
+    - I need a [short time](FoundIt.sort.contract)
     - I need a [temporary](FoundIt.sort.contract)
     - find a job
-    - I'm looking for a job'
-    - I want to work in [Berlin](FoundIt.sort.city)
-    - I want to work in [London](FoundIt.sort.city)
-    - I want to work in [Madrid](FoundIt.sort.city)
-    - I want to work in [Paris](FoundIt.sort.city)
-    - I want to work in [Stockholm](FoundIt.sort.city)
-    - is there jobs in [anything](FoundIt.sort.field)
+    - I'm looking for a job
+    - I want to work in [Abou Dabi](FoundIt.sort.city)
+    - I want to work in [Beijing](FoundIt.sort.city)
+    - I want to work in [Damascus](FoundIt.sort.city)
+    - I want to work in [Göteborg](FoundIt.sort.city)
+    - I want to work in [New York](FoundIt.sort.city)
+    - I want to work in [Oslo](FoundIt.sort.city)
+    - I want to work in [Ottawa](FoundIt.sort.city)
+    - I want to work in [Seoul](FoundIt.sort.city)
+    - I want to work in [Tehran](FoundIt.sort.city)
+    - I want to work in [Washington](FoundIt.sort.city)
+    - I want to work in [Moscow](FoundIt.sort.city)
+    - I want to work in [Melbourne](FoundIt.sort.city)
+    - I want to work in [Miami](FoundIt.sort.city)
+    - I want to work in [Karlstad](FoundIt.sort.city)
+    - I want to work in [Montreal](FoundIt.sort.city)
+    - I want to work in [Dubaï](FoundIt.sort.city)
+    - I want to work in [Toulouse](FoundIt.sort.city)
+    - I want to work in [Milan](FoundIt.sort.city)
+    - I want to work in [Brazilia](FoundIt.sort.city)
+    - I want to work in [Rio de Janeiro](FoundIt.sort.city)
+    - I want to work in [Casablanca](FoundIt.sort.city)
+    - I want to work in [San Francisco](FoundIt.sort.city)
+    - I want to work in [Marseille](FoundIt.sort.city)
+    - I want to work in [Flagstaff](FoundIt.sort.city)
+    - I want to work in [Malmö](FoundIt.sort.city)
+    - I want to work in [Singapor](FoundIt.sort.city)
+    - I want to work in [Lisbonne](FoundIt.sort.city)
+    - I want to work in [Mexico City](FoundIt.sort.city)
+    - I want to work in [Athens](FoundIt.sort.city)
+    - I want to work in [Ankara](FoundIt.sort.city)
+    - is there jobs in [IT](FoundIt.sort.field)
+    - is there jobs in [biology](FoundIt.sort.field)
     - is there jobs in [biology](FoundIt.sort.field)
     - is there jobs in [chemistry](FoundIt.sort.field)
-    - is there jobs in [computer science](FoundIt.sort.field)
+    - is there jobs in [computational linguist](FoundIt.sort.field)
     - is there jobs in [electrical engineering](FoundIt.sort.field)
-    - is there jobs in [linguistic](FoundIt.sort.field)
+    - is there jobs in [linguistics](FoundIt.sort.field)
+    - is there jobs in [programmer](FoundIt.sort.field)
+    - is there jobs in [software developer](FoundIt.sort.field)
+    - is there jobs in [translator](FoundIt.sort.field)
+    - is there jobs in [consultant](FoundIt.sort.field)
+    - is there jobs in [barista](FoundIt.sort.field)
+    - is there jobs in [waiter](FoundIt.sort.field)
+    - is there jobs in [fast food](FoundIt.sort.field)
+    - is there jobs in [baby sitter](FoundIt.sort.field)
+    - is there jobs in [coach](FoundIt.sort.field)
+    - is there jobs in [robotics](FoundIt.sort.field)
+    - is there jobs in [mecanics](FoundIt.sort.field)
+    - is there jobs in [singer](FoundIt.sort.field)
+    - is there jobs in [actor](FoundIt.sort.field)
+    - is there jobs in [writer](FoundIt.sort.field)
     - I want to find a job
-    - I want to see jobs [date](FoundIt.sort.extra_info)
-    - I want to see jobs [remotely](FoundIt.sort.extra_info)
-    - I wonder what are the job opportunities in [Berlin](FoundIt.sort.city)
-    - I wonder what are the job opportunities in [London](FoundIt.sort.city)
-    - I wonder what are the job opportunities in [Madrid](FoundIt.sort.city)
-    - I wonder what are the job opportunities in [Paris](FoundIt.sort.city)
-    - I wonder what are the job opportunities in [Stockholm](FoundIt.sort.city)
-    - I wonder what are the job opportunities in [I don't mind](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [UK](FoundIt.sort.country)
-    - I wonder what are the job opportunities in [contract](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [Spain](FoundIt.sort.country)
-    - I wonder what are the job opportunities in [full time](FoundIt.sort.contract) in [Berlin](FoundIt.sort.city) in [Spain](FoundIt.sort.country)
-    - I wonder what are the job opportunities in [internship](FoundIt.sort.contract) in [Madrid](FoundIt.sort.city) in [Germany](FoundIt.sort.country)
-    - I wonder what are the job opportunities in [part time](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [Germany](FoundIt.sort.country)
-    - I wonder what are the job opportunities in [temporary](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [Sweden](FoundIt.sort.country)
-    - I need a [I don't mind](FoundIt.sort.contract) in [anything](FoundIt.sort.field)
-    - I need a [contract](FoundIt.sort.contract) in [chemistry](FoundIt.sort.field)
-    - I need a [full time](FoundIt.sort.contract) in [electrical engineering](FoundIt.sort.field)
-    - I need a [internship](FoundIt.sort.contract) in [linguistic](FoundIt.sort.field)
-    - I need a [part time](FoundIt.sort.contract) in [computer science](FoundIt.sort.field)
-    - I need a [temporary](FoundIt.sort.contract) in [electrical engineering](FoundIt.sort.field)
-    - I want a [I don't mind](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [computer science](FoundIt.sort.field)
-    - I want a [contract](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [electrical engineering](FoundIt.sort.field)
-    - I want a [full time](FoundIt.sort.contract) in [Madrid](FoundIt.sort.city) in [anything](FoundIt.sort.field)
-    - I want a [internship](FoundIt.sort.contract) in [London](FoundIt.sort.city) in [biology](FoundIt.sort.field)
-    - I want a [part time](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [linguistic](FoundIt.sort.field)
-    - I want a [temporary](FoundIt.sort.contract) in [Paris](FoundIt.sort.city) in [biology](FoundIt.sort.field)
+    - I want to see [distance work](FoundIt.sort.extra_info) jobs
+    - I want to see [entry level](FoundIt.sort.extra_info) jobs
+    - I want to see [junior](FoundIt.sort.extra_info) jobs
+    - I want to see [paid](FoundIt.sort.extra_info) jobs
+    - I want to see [remote](FoundIt.sort.extra_info) jobs
+    - I want to see [remotely](FoundIt.sort.extra_info) jobs
+    - I want to see [senior](FoundIt.sort.extra_info) jobs
+    - I want to see [work from home](FoundIt.sort.extra_info) jobs
+    - I wonder what are the job opportunities in [Abou Dabi](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Beijing](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Damascus](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Göteborg](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [New York](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Oslo](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Ottawa](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Seoul](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Tehran](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Washington](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Moscow](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Melbourne](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Miami](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Karlstad](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Montreal](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Dubaï](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Toulouse](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Milan](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Brazilia](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Rio de Janeiro](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Casablanca](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [San Francisco](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Marseille](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Flagstaff](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Malmö](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Singapor](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Lisbonne](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Mexico City](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Athens](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [Ankara](FoundIt.sort.city)
+    - I wonder what are the job opportunities in [fixed-term](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [The UK](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [full time](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [The UK](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [internship](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [The UK](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [permanent](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [The UK](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [short time](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [The UK](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [temporary](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [The UK](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [fixed-term](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [Greece](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [full time](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [Greece](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [internship](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [Greece](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [permanent](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [Greece](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [short time](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [Greece](FoundIt.sort.country)
+    - I wonder what are the job opportunities in [temporary](FoundIt.sort.contract) in [Göteborg](FoundIt.sort.city) in [Greece](FoundIt.sort.country)
+    - I need a [fixed-term](FoundIt.sort.contract) in [programmer](FoundIt.sort.field)
+    - I need a [full time](FoundIt.sort.contract) in [programmer](FoundIt.sort.field)
+    - I need a [internship](FoundIt.sort.contract) in [programmer](FoundIt.sort.field)
+    - I need a [permanent](FoundIt.sort.contract) in [programmer](FoundIt.sort.field)
+    - I need a [short time](FoundIt.sort.contract) in [programmer](FoundIt.sort.field)
+    - I need a [temporary](FoundIt.sort.contract) in [programmer](FoundIt.sort.field)
+    - I need a [fixed-term](FoundIt.sort.contract) in [consultant](FoundIt.sort.field)
+    - I need a [full time](FoundIt.sort.contract) in [barista](FoundIt.sort.field)
+    - I need a [internship](FoundIt.sort.contract) in [waiter](FoundIt.sort.field)
+    - I need a [permanent](FoundIt.sort.contract) in [fast food](FoundIt.sort.field)
+    - I need a [short time](FoundIt.sort.contract) in [baby sitter](FoundIt.sort.field)
+    - I need a [temporary](FoundIt.sort.contract) in [coach](FoundIt.sort.field)
+    - I need a [full time](FoundIt.sort.contract) in [robotics](FoundIt.sort.field)
+    - I need a [internship](FoundIt.sort.contract) in [mecanics](FoundIt.sort.field)
+    - I need a [permanent](FoundIt.sort.contract) in [singer](FoundIt.sort.field)
+    - I need a [short time](FoundIt.sort.contract) in [actor](FoundIt.sort.field)
+    - I need a [temporary](FoundIt.sort.contract) in [writer](FoundIt.sort.field)
+    - I need a [fixed-term](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field)
+    - I need a [full time](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field)
+    - I need a [internship](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field)
+    - I need a [permanent](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field)
+    - I need a [short time](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field)
+    - I need a [temporary](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field)
+    - I need a [fixed-term](FoundIt.sort.contract) contract in [consultant](FoundIt.sort.field)
+    - I need a [full time](FoundIt.sort.contract) contract in [barista](FoundIt.sort.field)
+    - I need a [internship](FoundIt.sort.contract) contract in [waiter](FoundIt.sort.field)
+    - I need a [permanent](FoundIt.sort.contract) contract in [fast food](FoundIt.sort.field)
+    - I need a [short time](FoundIt.sort.contract) contract in [baby sitter](FoundIt.sort.field)
+    - I need a [temporary](FoundIt.sort.contract) contract in [coach](FoundIt.sort.field)
+    - I need a [full time](FoundIt.sort.contract) contract in [robotics](FoundIt.sort.field)
+    - I need a [internship](FoundIt.sort.contract) contract in [mecanics](FoundIt.sort.field)
+    - I need a [permanent](FoundIt.sort.contract) contract in [singer](FoundIt.sort.field)
+    - I need a [short time](FoundIt.sort.contract) contract in [actor](FoundIt.sort.field)
+    - I need a [temporary](FoundIt.sort.contract) contract in [writer](FoundIt.sort.field)
+    - I want a [fixed-term](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field) in [Göteborg](FoundIt.sort.city)
+    - I want a [full time](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field) in [Göteborg](FoundIt.sort.city)
+    - I want a [internship](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field) in [Göteborg](FoundIt.sort.city)
+    - I want a [permanent](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field) in [Göteborg](FoundIt.sort.city)
+    - I want a [short time](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field) in [Göteborg](FoundIt.sort.city)
+    - I want a [temporary](FoundIt.sort.contract) contract in [programmer](FoundIt.sort.field) in [Göteborg](FoundIt.sort.city)
+    - I want a [fixed-term](FoundIt.sort.contract) contract in [barista](FoundIt.sort.field) in [Brazilia](FoundIt.sort.city)
+    - I want a [full time](FoundIt.sort.contract) contract in [barista](FoundIt.sort.field) in [Brazilia](FoundIt.sort.city)
+    - I want a [internship](FoundIt.sort.contract) contract in [barista](FoundIt.sort.field) in [Brazilia](FoundIt.sort.city)
+    - I want a [permanent](FoundIt.sort.contract) contract in [barista](FoundIt.sort.field) in [Brazilia](FoundIt.sort.city)
+    - I want a [short time](FoundIt.sort.contract) contract in [barista](FoundIt.sort.field) in [Brazilia](FoundIt.sort.city)
+    - I want a [temporary](FoundIt.sort.contract) contract in [barista](FoundIt.sort.field) in [Brazilia](FoundIt.sort.city)
 
 - intent: FoundIt:answer
   examples: |
+    - [Göteborg](FoundIt.sort.city)
+    - [New York](FoundIt.sort.city)
+    - [Abou Dabi](FoundIt.sort.city)
+    - [Damascus](FoundIt.sort.city)
+    - [Tehran](FoundIt.sort.city)
+    - [Beijing](FoundIt.sort.city)
+    - [Ottawa](FoundIt.sort.city)
+    - [Washington](FoundIt.sort.city)
+    - [Seoul](FoundIt.sort.city)
+    - [Oslo](FoundIt.sort.city)
+    - [Canberra](FoundIt.sort.city)
+    - [Tokyo](FoundIt.sort.city)
+    - [Amsterdam](FoundIt.sort.city)
+    - [Rome](FoundIt.sort.city)
+    - [Helsinki](FoundIt.sort.city)
     - [London](FoundIt.sort.city)
     - [Paris](FoundIt.sort.city)
     - [Madrid](FoundIt.sort.city)
     - [Berlin](FoundIt.sort.city)
     - [Stockholm](FoundIt.sort.city)
-    - [part time](FoundIt.sort.contract)
+    - [Moscow](FoundIt.sort.city)
+    - [Melbourne](FoundIt.sort.city)
+    - [Miami](FoundIt.sort.city)
+    - [Karlstad](FoundIt.sort.city)
+    - [Montreal](FoundIt.sort.city)
+    - [Dubaï](FoundIt.sort.city)
+    - [Toulouse](FoundIt.sort.city)
+    - [Milan](FoundIt.sort.city)
+    - [Brazilia](FoundIt.sort.city)
+    - [Rio de Janeiro](FoundIt.sort.city)
+    - [Casablanca](FoundIt.sort.city)
+    - [San Francisco](FoundIt.sort.city)
+    - [Marseille](FoundIt.sort.city)
+    - [Flagstaff](FoundIt.sort.city)
+    - [Malmö](FoundIt.sort.city)
+    - [Singapor](FoundIt.sort.city)
+    - [Lisbonne](FoundIt.sort.city)
+    - [Mexico City](FoundIt.sort.city)
+    - [Athens](FoundIt.sort.city)
+    - [Ankara](FoundIt.sort.city)
     - [full time](FoundIt.sort.contract)
+    - [permanent](FoundIt.sort.contract)
     - [temporary](FoundIt.sort.contract)
-    - [contract](FoundIt.sort.contract)
+    - [fixed-term](FoundIt.sort.contract)
     - [internship](FoundIt.sort.contract)
-    - [I don't mind](FoundIt.sort.contract)
+    - [short time](FoundIt.sort.contract)
+    - [The UK](FoundIt.sort.country)
+    - [United Kingdom](FoundIt.sort.country)
+    - [Great Britain](FoundIt.sort.country)
     - [UK](FoundIt.sort.country)
     - [France](FoundIt.sort.country)
     - [Spain](FoundIt.sort.country)
     - [Germany](FoundIt.sort.country)
     - [Sweden](FoundIt.sort.country)
-    - [date](FoundIt.sort.extra_info)
+    - [USA](FoundIt.sort.country)
+    - [America](FoundIt.sort.country)
+    - [The United States](FoundIt.sort.country)
+    - [North America](FoundIt.sort.country)
+    - [United States](FoundIt.sort.country)
+    - [The USA](FoundIt.sort.country)
+    - [Italy](FoundIt.sort.country)
+    - [Belgium](FoundIt.sort.country)
+    - [Canada](FoundIt.sort.country)
+    - [Norway](FoundIt.sort.country)
+    - [Finland](FoundIt.sort.country)
+    - [Iran](FoundIt.sort.country)
+    - [Holland](FoundIt.sort.country)
+    - [the Netherlands](FoundIt.sort.country)
+    - [Netherlands](FoundIt.sort.country)
+    - [Syria](FoundIt.sort.country)
+    - [the Syrian Arab Republic](FoundIt.sort.country)
+    - [Australia](FoundIt.sort.country)
+    - [Japan](FoundIt.sort.country)
+    - [China](FoundIt.sort.country)
+    - [UAE](FoundIt.sort.country)
+    - [the United Arab Emirates](FoundIt.sort.country)
+    - [United Arab Emirates](FoundIt.sort.country)
+    - [the UAE](FoundIt.sort.country)
+    - [Korea](FoundIt.sort.country)
+    - [South Korea](FoundIt.sort.country)
+    - [Russia](FoundIt.sort.country)
+    - [Greece](FoundIt.sort.country)
+    - [Austria](FoundIt.sort.country)
+    - [Albania](FoundIt.sort.country)
+    - [Mexico](FoundIt.sort.country)
+    - [Chile](FoundIt.sort.country)
+    - [Argentina](FoundIt.sort.country)
+    - [New Zeland](FoundIt.sort.country)
+    - [India](FoundIt.sort.country)
+    - [Iraq](FoundIt.sort.country)
+    - [Egypt](FoundIt.sort.country)
+    - [remote](FoundIt.sort.extra_info)
     - [remotely](FoundIt.sort.extra_info)
-    - [computer science](FoundIt.sort.field)
-    - [linguistic](FoundIt.sort.field)
-    - [electrical engineering](FoundIt.sort.field)
-    - [chemistry](FoundIt.sort.field)
+    - [distance work](FoundIt.sort.extra_info)
+    - [work from home](FoundIt.sort.extra_info)
+    - [paid](FoundIt.sort.extra_info)
+    - [entry level](FoundIt.sort.extra_info)
+    - [senior](FoundIt.sort.extra_info)
+    - [junior](FoundIt.sort.extra_info)
+    - [programmer](FoundIt.sort.field)
     - [biology](FoundIt.sort.field)
-    - [anything](FoundIt.sort.field)
+    - [linguistics](FoundIt.sort.field)
+    - [chemistry](FoundIt.sort.field)
+    - [computational linguist](FoundIt.sort.field)
+    - [biology](FoundIt.sort.field)
+    - [electrical engineering](FoundIt.sort.field)
+    - [software developer](FoundIt.sort.field)
+    - [translator](FoundIt.sort.field)
+    - [IT](FoundIt.sort.field)
+    - [front end](FoundIt.sort.field)
+    - [developer](FoundIt.sort.field)
+    - [data analysis](FoundIt.sort.field)
+    - [human resources](FoundIt.sort.field)
+    - [professor](FoundIt.sort.field)
+    - [logic](FoundIt.sort.field)
+    - [environment](FoundIt.sort.field)
+    - [civil engineer](FoundIt.sort.field)
+    - [seller](FoundIt.sort.field)
+    - [cook](FoundIt.sort.field)
+    - [accountant](FoundIt.sort.field)
+    - [manager](FoundIt.sort.field)
+    - [senior](FoundIt.sort.field)
+    - [junio](FoundIt.sort.field)
+    - [CEO](FoundIt.sort.field)
+    - [consultant](FoundIt.sort.field)
+    - [barista](FoundIt.sort.field)
+    - [waiter](FoundIt.sort.field)
+    - [fast food](FoundIt.sort.field)
+    - [baby sitter](FoundIt.sort.field)
+    - [coach](FoundIt.sort.field)
+    - [robotics](FoundIt.sort.field)
+    - [mecanics](FoundIt.sort.field)
+    - [singer](FoundIt.sort.field)
+    - [actor](FoundIt.sort.field)
+    - [writer](FoundIt.sort.field)
     - [single](FoundIt.sort.string)
     - [double word](FoundIt.sort.string)
     - [three in one](FoundIt.sort.string)
@@ -104,41 +346,131 @@ nlu:
     - [noone counts toes like an eight toed guy](FoundIt.sort.string)
     - [it matters to make sense for nine of us](FoundIt.sort.string)
     - [would you bring ten or none to a desert island](FoundIt.sort.string)
-    - yes [London](FoundIt.sort.city)
-    - yes [I don't mind](FoundIt.sort.contract)
-    - yes [electrical engineering](FoundIt.sort.field)
-    - yes [bring them through to the jolly seven](FoundIt.sort.string)
-    - no [Paris](FoundIt.sort.city)
-    - no [UK](FoundIt.sort.country)
-    - no [chemistry](FoundIt.sort.field)
-    - no [noone counts toes like an eight toed guy](FoundIt.sort.string)
+    - yes [Göteborg](FoundIt.sort.city)
+    - yes [Canberra](FoundIt.sort.city)
+    - yes [Moscow](FoundIt.sort.city)
+    - yes [internship](FoundIt.sort.contract)
+    - yes [USA](FoundIt.sort.country)
+    - yes [Finland](FoundIt.sort.country)
+    - yes [UAE](FoundIt.sort.country)
+    - yes [work from home](FoundIt.sort.extra_info)
+    - yes [biology](FoundIt.sort.field)
+    - yes [logic](FoundIt.sort.field)
+    - yes [single](FoundIt.sort.string)
+    - no [New York](FoundIt.sort.city)
+    - no [Tokyo](FoundIt.sort.city)
+    - no [Melbourne](FoundIt.sort.city)
+    - no [short time](FoundIt.sort.contract)
+    - no [America](FoundIt.sort.country)
+    - no [Iran](FoundIt.sort.country)
+    - no [the United Arab Emirates](FoundIt.sort.country)
+    - no [paid](FoundIt.sort.extra_info)
+    - no [electrical engineering](FoundIt.sort.field)
+    - no [environment](FoundIt.sort.field)
+    - no [double word](FoundIt.sort.string)
 
 - intent: FoundIt:answer_negation
   examples: |
+    - not [Göteborg](FoundIt.sort.city)
+    - not [New York](FoundIt.sort.city)
+    - not [Abou Dabi](FoundIt.sort.city)
+    - not [Damascus](FoundIt.sort.city)
+    - not [Tehran](FoundIt.sort.city)
+    - not [Beijing](FoundIt.sort.city)
+    - not [Ottawa](FoundIt.sort.city)
+    - not [Washington](FoundIt.sort.city)
+    - not [Seoul](FoundIt.sort.city)
+    - not [Oslo](FoundIt.sort.city)
+    - not [Canberra](FoundIt.sort.city)
+    - not [Tokyo](FoundIt.sort.city)
+    - not [Amsterdam](FoundIt.sort.city)
+    - not [Rome](FoundIt.sort.city)
+    - not [Helsinki](FoundIt.sort.city)
     - not [London](FoundIt.sort.city)
     - not [Paris](FoundIt.sort.city)
     - not [Madrid](FoundIt.sort.city)
     - not [Berlin](FoundIt.sort.city)
     - not [Stockholm](FoundIt.sort.city)
-    - not [part time](FoundIt.sort.contract)
+    - not [Moscow](FoundIt.sort.city)
+    - not [Melbourne](FoundIt.sort.city)
+    - not [Miami](FoundIt.sort.city)
+    - not [Karlstad](FoundIt.sort.city)
+    - not [Montreal](FoundIt.sort.city)
+    - not [Dubaï](FoundIt.sort.city)
     - not [full time](FoundIt.sort.contract)
+    - not [permanent](FoundIt.sort.contract)
     - not [temporary](FoundIt.sort.contract)
-    - not [contract](FoundIt.sort.contract)
+    - not [fixed-term](FoundIt.sort.contract)
     - not [internship](FoundIt.sort.contract)
-    - not [I don't mind](FoundIt.sort.contract)
+    - not [short time](FoundIt.sort.contract)
+    - not [The UK](FoundIt.sort.country)
+    - not [United Kingdom](FoundIt.sort.country)
+    - not [Great Britain](FoundIt.sort.country)
     - not [UK](FoundIt.sort.country)
     - not [France](FoundIt.sort.country)
     - not [Spain](FoundIt.sort.country)
     - not [Germany](FoundIt.sort.country)
     - not [Sweden](FoundIt.sort.country)
-    - not [date](FoundIt.sort.extra_info)
+    - not [USA](FoundIt.sort.country)
+    - not [America](FoundIt.sort.country)
+    - not [The United States](FoundIt.sort.country)
+    - not [North America](FoundIt.sort.country)
+    - not [United States](FoundIt.sort.country)
+    - not [The USA](FoundIt.sort.country)
+    - not [Italy](FoundIt.sort.country)
+    - not [Belgium](FoundIt.sort.country)
+    - not [Canada](FoundIt.sort.country)
+    - not [Norway](FoundIt.sort.country)
+    - not [Finland](FoundIt.sort.country)
+    - not [Iran](FoundIt.sort.country)
+    - not [Holland](FoundIt.sort.country)
+    - not [the Netherlands](FoundIt.sort.country)
+    - not [Netherlands](FoundIt.sort.country)
+    - not [Syria](FoundIt.sort.country)
+    - not [the Syrian Arab Republic](FoundIt.sort.country)
+    - not [Australia](FoundIt.sort.country)
+    - not [Japan](FoundIt.sort.country)
+    - not [China](FoundIt.sort.country)
+    - not [UAE](FoundIt.sort.country)
+    - not [the United Arab Emirates](FoundIt.sort.country)
+    - not [United Arab Emirates](FoundIt.sort.country)
+    - not [the UAE](FoundIt.sort.country)
+    - not [Korea](FoundIt.sort.country)
+    - not [South Korea](FoundIt.sort.country)
+    - not [Russia](FoundIt.sort.country)
+    - not [remote](FoundIt.sort.extra_info)
     - not [remotely](FoundIt.sort.extra_info)
-    - not [computer science](FoundIt.sort.field)
-    - not [linguistic](FoundIt.sort.field)
-    - not [electrical engineering](FoundIt.sort.field)
-    - not [chemistry](FoundIt.sort.field)
+    - not [distance work](FoundIt.sort.extra_info)
+    - not [work from home](FoundIt.sort.extra_info)
+    - not [paid](FoundIt.sort.extra_info)
+    - not [entry level](FoundIt.sort.extra_info)
+    - not [senior](FoundIt.sort.extra_info)
+    - not [junior](FoundIt.sort.extra_info)
+    - not [programmer](FoundIt.sort.field)
     - not [biology](FoundIt.sort.field)
-    - not [anything](FoundIt.sort.field)
+    - not [linguistics](FoundIt.sort.field)
+    - not [chemistry](FoundIt.sort.field)
+    - not [computational linguist](FoundIt.sort.field)
+    - not [biology](FoundIt.sort.field)
+    - not [electrical engineering](FoundIt.sort.field)
+    - not [software developer](FoundIt.sort.field)
+    - not [translator](FoundIt.sort.field)
+    - not [IT](FoundIt.sort.field)
+    - not [front end](FoundIt.sort.field)
+    - not [developer](FoundIt.sort.field)
+    - not [data analysis](FoundIt.sort.field)
+    - not [human resources](FoundIt.sort.field)
+    - not [professor](FoundIt.sort.field)
+    - not [logic](FoundIt.sort.field)
+    - not [environment](FoundIt.sort.field)
+    - not [civil engineer](FoundIt.sort.field)
+    - not [seller](FoundIt.sort.field)
+    - not [cook](FoundIt.sort.field)
+    - not [accountant](FoundIt.sort.field)
+    - not [manager](FoundIt.sort.field)
+    - not [senior](FoundIt.sort.field)
+    - not [junio](FoundIt.sort.field)
+    - not [CEO](FoundIt.sort.field)
 
 - intent: NEGATIVE
   examples: |
@@ -378,100 +710,166 @@ nlu:
     - good morning
     - hey
 
-- synonym: FoundIt:city_london
+- synonym: FoundIt:city_entries
   examples: |
+    - Göteborg
+    - New York
+    - Abou Dabi
+    - Damascus
+    - Tehran
+    - Beijing
+    - Ottawa
+    - Washington
+    - Seoul
+    - Oslo
+    - Canberra
+    - Tokyo
+    - Amsterdam
+    - Rome
+    - Helsinki
     - London
-
-- synonym: FoundIt:city_paris
-  examples: |
     - Paris
-
-- synonym: FoundIt:city_madrid
-  examples: |
     - Madrid
-
-- synonym: FoundIt:city_berlin
-  examples: |
     - Berlin
-
-- synonym: FoundIt:city_stockholm
-  examples: |
     - Stockholm
+    - Moscow
+    - Melbourne
+    - Miami
+    - Karlstad
+    - Montreal
+    - Dubaï
+    - Toulouse
+    - Milan
+    - Brazilia
+    - Rio de Janeiro
+    - Casablanca
+    - San Francisco
+    - Marseille
+    - Flagstaff
+    - Malmö
+    - Singapor
+    - Lisbonne
+    - Mexico City
+    - Athens
+    - Ankara
 
-- synonym: FoundIt:contract_short
-  examples: |
-    - part time
-
-- synonym: FoundIt:contract_long
+- synonym: FoundIt:contract_entries
   examples: |
     - full time
-
-- synonym: FoundIt:contract_seasonal
-  examples: |
+    - permanent
     - temporary
-
-- synonym: FoundIt:contract_all
-  examples: |
-    - contract
-
-- synonym: FoundIt:contract_internship
-  examples: |
+    - fixed-term
     - internship
+    - short time
+    - distance work
+    - work from home
+    - paid
+    - entry level
+    - senior
+    - junior
 
-- synonym: FoundIt:contract_optional
+- synonym: FoundIt:country_entries
   examples: |
-    - I don't mind
-
-- synonym: FoundIt:country_uk
-  examples: |
+    - The UK
+    - United Kingdom
+    - Great Britain
     - UK
-
-- synonym: FoundIt:country_france
-  examples: |
     - France
-
-- synonym: FoundIt:country_spain
-  examples: |
     - Spain
-
-- synonym: FoundIt:country_germany
-  examples: |
     - Germany
-
-- synonym: FoundIt:country_sweden
-  examples: |
     - Sweden
+    - USA
+    - America
+    - The United States
+    - North America
+    - United States
+    - The USA
+    - Italy
+    - Belgium
+    - Canada
+    - Norway
+    - Finland
+    - Iran
+    - Holland
+    - the Netherlands
+    - Netherlands
+    - Syria
+    - the Syrian Arab Republic
+    - Australia
+    - Japan
+    - China
+    - UAE
+    - the United Arab Emirates
+    - United Arab Emirates
+    - the UAE
+    - Korea
+    - South Korea
+    - Russia
+    - Greece
+    - Austria
+    - Albania
+    - Mexico
+    - Chile
+    - Argentina
+    - New Zeland
+    - India
+    - Iraq
+    - Egypt
 
-- synonym: FoundIt:extra_info_to_search_date
+- synonym: FoundIt:extra_info_entries
   examples: |
-    - date
-
-- synonym: FoundIt:extra_info_to_search_remote
-  examples: |
+    - remote
     - remotely
+    - distance work
+    - work from home
+    - paid
+    - entry level
+    - senior
+    - junior
+    - full time
+    - permanent
+    - temporary
+    - fixed-term
+    - internship
+    - short time
 
-- synonym: FoundIt:field_computer
+- synonym: FoundIt:field_entries
   examples: |
-    - computer science
-
-- synonym: FoundIt:field_linguistic
-  examples: |
-    - linguistic
-
-- synonym: FoundIt:field_electrical
-  examples: |
-    - electrical engineering
-
-- synonym: FoundIt:field_chemistry
-  examples: |
-    - chemistry
-
-- synonym: FoundIt:field_biology
-  examples: |
+    - programmer
     - biology
-
-- synonym: FoundIt:field_anything
-  examples: |
-    - anything
+    - linguistics
+    - chemistry
+    - computational linguist
+    - biology
+    - electrical engineering
+    - software developer
+    - translator
+    - IT
+    - front end
+    - developer
+    - data analysis
+    - human resources
+    - professor
+    - logic
+    - environment
+    - civil engineer
+    - seller
+    - cook
+    - accountant
+    - manager
+    - senior
+    - junio
+    - CEO
+    - consultant
+    - barista
+    - waiter
+    - fast food
+    - baby sitter
+    - coach
+    - robotics
+    - mecanics
+    - singer
+    - actor
+    - writer
 
 

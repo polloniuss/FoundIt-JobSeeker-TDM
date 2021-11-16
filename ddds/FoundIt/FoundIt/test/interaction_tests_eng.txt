@@ -1,42 +1,96 @@
 --- main menu
 S> What would you like to do?
 
+--- Example query
+S> What would you like to do?
+U> I need a job
+S> In which domain would you like to work?
+U> computational linguist
+S> In which country?
+U> Sweden
+S> In which city?
+U> Göteborg
+S> What kind of contract would you prefer?
+U> internship
+S> Found It! Here are the best job opportunities I found for you. *
+
+--- Trying dynamic value 1
+S> What would you like to do?
+U> I need a job
+S> In which domain would you like to work?
+U> philosophy
+S> In which country?
+U> Netherlands
+S> In which city?
+U> Amsterdam
+S> What kind of contract would you prefer?
+U> full time
+S> Found It! Here are the best job opportunities I found for you. *
+
+--- Trying dynamic value 2
+S> What would you like to do?
+U> I need a job
+S> In which domain would you like to work?
+U> translator
+S> In which country?
+U> USA
+S> In which city?
+U> Las Vegas
+S> What kind of contract would you prefer?
+U> temporary
+S> Found It! Here are the best job opportunities I found for you. *
+
+--- Trying dynamic value 3
+S> What would you like to do?
+U> I need a job
+S> In which domain would you like to work?
+U> computer
+S> In which country?
+U> Iran
+S> In which city?
+U> Tehran
+S> What kind of contract would you prefer?
+U> full time
+S> Found It! Here are the best job opportunities I found for you. *
+
 --- job seeker (incremental)
 S> What would you like to do?
 U> I need a job
-S> Which field?
-U> computer science
-S> Which country?
-U> France
-S> Which city?
-U> Paris
-S> Which contract?
+S> In which domain would you like to work?
+U> developer
+S> In which country?
+U> Canada
+S> In which city?
+U> Ottawa
+S> What kind of contract would you prefer?
 U> full time
 S> Found It! Here are the best job opportunities I found for you. *
 
 --- job seeker (over answering)
 S> What would you like to do?
-U> I need a internship in linguistic           
-S> Which country?
-U> France    
-S> Which city?
+U> I need a internship in linguistics
+S> In which country?
+U> France
+S> In which city?
 U> Paris  
 S> Found It! Here are the best job opportunities I found for you. *
 
 --- job seeker (one-shot) impossible
 S> What would you like to do?
-U> I want a full time in Paris in France in electrical engineering
+U> I want a full time contract in electrical engineering in Berlin
+S> In which country?
+U> Germany
 S> Found It! Here are the best job opportunities I found for you. *
 
---- extra info (one-shot)
+--- extra info (incremental)
 S> What would you like to do?
-U> I want to see jobs remotely
-S> Which field?
-U> linguistic
-S> Which country?
-U> France
-S> Which city?
-U> Paris
-S> Which contract?
-U> internship
+U> I want to see remote jobs
+S> In which domain would you like to work?
+U> human resources
+S> In which country?
+U> USA
+S> In which city?
+U> New York
+S> What kind of contract would you prefer?
+U> permanent
 S> Found It! Here are the best job opportunities I found for you.*

@@ -50,11 +50,12 @@
       <item>I want to work in <slot predicate="city_to_search"/></item>
       <item>is there jobs in <slot predicate="field_to_search"/></item>
       <item>I want to find a job</item>
-      <item>I want to see jobs <slot predicate="extra_info_to_search"/></item>
+      <item>I want to see <slot predicate="extra_info_to_search"/> jobs</item>
       <item>I wonder what are the job opportunities in <slot predicate="city_to_search"/></item>
       <item>I wonder what are the job opportunities in <slot predicate="contract_to_search"/> in <slot predicate="city_to_search"/> in <slot predicate="country_to_search"/></item>
       <item>I need a <slot predicate="contract_to_search"/> in <slot predicate="field_to_search"/></item>
-      <item>I want a <slot predicate="contract_to_search"/> in <slot predicate="city_to_search"/> in <slot predicate="field_to_search"/></item>
+      <item>I need a <slot predicate="contract_to_search"/> contract in <slot predicate="field_to_search"/></item>
+      <item>I want a <slot predicate="contract_to_search"/> contract in <slot predicate="field_to_search"/> in <slot predicate="city_to_search"/></item>
     </one-of>
   </question>
 
@@ -67,23 +68,23 @@
   </action>
 
   <question speaker="system" predicate="field_to_search" type="wh_question">
-    which field
+    in which domain would you like to work
   </question>
 
   <question speaker="system" predicate="country_to_search" type="wh_question">
-    which country
+    in which country
   </question>
 
   <question speaker="system" predicate="city_to_search" type="wh_question">
-    which city
+    in which city
   </question>
 
   <question speaker="system" predicate="contract_to_search" type="wh_question">
-    which contract
+    what kind of contract would you prefer
   </question>
 
   <question type="wh_question" speaker="all" predicate="extra_info_to_search">
-    extra information
+    any extra information that you want me to take in consideration
   </question>
 
   <answer speaker="system" predicate="job_seeker">
@@ -91,36 +92,132 @@
   </answer>
 
   <report action="job_application" status="ended">
-    Your application has been sent
+    Your application has not been sent because this functionality is not working yet sorry.
   </report>
 
-  <individual name="field_computer">computer science</individual>
-  <individual name="field_linguistic">linguistic</individual>
-  <individual name="field_electrical">electrical engineering</individual>
-  <individual name="field_chemistry">chemistry</individual>
-  <individual name="field_biology">biology</individual>
-  <individual name="field_anything">anything</individual>
+  <individual name="field_entries">
+    <one-of>
+      <item>programmer</item>
+      <item>biology</item>
+      <item>linguistics</item>
+      <item>chemistry</item>
+      <item>computational linguist</item>
+      <item>biology</item>
+      <item>electrical engineering</item>
+      <item>software developer</item>
+      <item>translator</item>
+      <item>IT</item>
+      <item>front end</item>
+      <item>developer</item>
+      <item>data analysis</item>
+      <item>human resources</item>
+      <item>professor</item>
+      <item>logic</item>
+      <item>environment</item>
+      <item>civil engineer</item>
+      <item>seller</item>
+      <item>cook</item>
+      <item>accountant</item>
+      <item>manager</item>
+      <item>senior</item>
+      <item>junio</item>
+      <item>CEO</item>
+    </one-of>
+  </individual>
 
-  <individual name="country_uk">UK</individual>
-  <individual name="country_france">France</individual>
-  <individual name="country_spain">Spain</individual>
-  <individual name="country_germany">Germany</individual>
-  <individual name="country_sweden">Sweden</individual>
+  <individual name="country_entries">
+    <one-of>
+      <item>The UK</item>
+      <item>United Kingdom</item>
+      <item>Great Britain</item>
+      <item>UK</item>
+      <item>France</item>
+      <item>Spain</item>
+      <item>Germany</item>
+      <item>Sweden</item>
+      <item>USA</item>
+      <item>America</item>
+      <item>The United States</item>
+      <item>North America</item>
+      <item>United States</item>
+      <item>The USA</item>
+      <item>Italy</item>
+      <item>Belgium</item>
+      <item>Canada</item>
+      <item>Norway</item>
+      <item>Finland</item>
+      <item>Iran</item>
+      <item>Holland</item>
+      <item>the Netherlands</item>
+      <item>Netherlands</item>
+      <item>Syria</item>
+      <item>the Syrian Arab Republic</item>
+      <item>Australia</item>
+      <item>Japan</item>
+      <item>China</item>
+      <item>UAE</item>
+      <item>the United Arab Emirates</item>
+      <item>United Arab Emirates</item>
+      <item>the UAE</item>
+      <item>Korea</item>
+      <item>South Korea</item>
+      <item>Russia</item>
+    </one-of>
+  </individual>
 
-  <individual name="city_london">London</individual>
-  <individual name="city_paris">Paris</individual>
-  <individual name="city_madrid">Madrid</individual>
-  <individual name="city_berlin">Berlin</individual>
-  <individual name="city_stockholm">Stockholm</individual>
+  <individual name="city_entries">
+    <one-of>
+      <item>Göteborg</item>
+      <item>New York</item>
+      <item>Abou Dabi</item>
+      <item>Damascus</item>
+      <item>Tehran</item>
+      <item>Beijing</item>
+      <item>Ottawa</item>
+      <item>Washington</item>
+      <item>Seoul</item>
+      <item>Oslo</item>
+      <item>Canberra</item>
+      <item>Tokyo</item>
+      <item>Amsterdam</item>
+      <item>Rome</item>
+      <item>Helsinki</item>
+      <item>London</item>
+      <item>Paris</item>
+      <item>Madrid</item>
+      <item>Berlin</item>
+      <item>Stockholm</item>
+      <item>Moscow</item>
+      <item>Melbourne</item>
+      <item>Miami</item>
+      <item>Karlstad</item>
+      <item>Montreal</item>
+      <item>Dubaï</item>
+    </one-of>
+  </individual>
 
-  <individual name="contract_short">part time</individual>
-  <individual name="contract_long">full time</individual>
-  <individual name="contract_seasonal">temporary</individual>
-  <individual name="contract_internship">internship</individual>
-  <individual name="contract_all">contract</individual>
-  <individual name="contract_optional">I don't mind</individual>
+  <individual name="contract_entries">
+    <one-of>
+      <item>full time</item>
+      <item>permanent</item>
+      <item>temporary</item>
+      <item>fixed-term</item>
+      <item>internship</item>
+      <item>short time</item>
+    </one-of>
+  </individual>
 
-  <individual name="extra_info_to_search_date">date</individual>
-  <individual name="extra_info_to_search_remote">remotely</individual>
+  <individual name="extra_info_entries">
+    <one-of>
+      <item>remote</item>
+      <item>remotely</item>
+      <item>distance work</item>
+      <item>work from home</item>
+      <item>paid</item>
+      <item>entry level</item>
+      <item>senior</item>
+      <item>junior</item>
+    </one-of>
+  </individual>
 
 </grammar>

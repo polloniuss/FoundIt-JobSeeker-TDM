@@ -16,34 +16,10 @@
     <predicate name="job_seeker" sort="string"/>
     <action name="job_application"/>
 
-
-    <individual name="field_computer" sort="field"/>
-    <individual name="field_linguistic" sort="field"/>
-    <individual name="field_electrical" sort="field"/>
-    <individual name="field_chemistry" sort="field"/>
-    <individual name="field_biology" sort="field"/>
-    <individual name="field_anything" sort="field"/>
-
-    <individual name="country_uk" sort="country"/>
-    <individual name="country_france" sort="country"/>
-    <individual name="country_spain" sort="country"/>
-    <individual name="country_germany" sort="country"/>
-    <individual name="country_sweden" sort="country"/>
-
-    <individual name="city_london" sort="city"/>
-    <individual name="city_paris" sort="city"/>
-    <individual name="city_madrid" sort="city"/>
-    <individual name="city_berlin" sort="city"/>
-    <individual name="city_stockholm" sort="city"/>
-
-    <individual name="contract_short" sort="contract"/>
-    <individual name="contract_long" sort="contract"/>
-    <individual name="contract_seasonal" sort="contract"/>
-    <individual name="contract_all" sort="contract"/>
-    <individual name="contract_internship" sort="contract"/>
-    <individual name="contract_optional" sort="contract"/>
-
-    <individual name="extra_info_to_search_date" sort="extra_info"/>
-    <individual name="extra_info_to_search_remote" sort="extra_info"/>
+    <individual name="field_entries" sort="field"/>
+    <individual name="country_entries" sort="country"/>
+    <individual name="city_entries" sort="city"/>
+    <individual name="contract_entries" sort="contract"/>
+    <individual name="extra_info_entries" sort="extra_info"/>
 
 </ontology>
