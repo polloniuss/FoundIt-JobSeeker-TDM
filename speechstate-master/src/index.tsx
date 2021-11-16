@@ -19,6 +19,9 @@ if (process.env.REACT_APP_BACKEND === 'TDM') {
 }
 
 
+let answer = ""
+let question = ""
+
 const { send, cancel } = actions
 
 const TOKEN_ENDPOINT = 'https://northeurope.api.cognitive.microsoft.com/sts/v1.0/issuetoken';
@@ -176,6 +179,7 @@ const machine = Machine<SDSContext, any, SDSEvent>({
             recLogResult: (context: SDSContext) => {
                 /* context.recResult = event.recResult; */
                 console.log('U>', context.recResult[0]["utterance"], context.recResult[0]["confidence"]);
+                answer = context.recResult[0]["utterance"]
             },
             logIntent: (context: SDSContext) => {
                 /* context.nluData = event.data */
@@ -247,6 +251,23 @@ const FigureButton = (props: Props): JSX.Element => {
     )
 }
 
+interface TextProps {
+    text: any
+}
+
+const TextDisplay = (props: TextProps): JSX.Element => {
+
+    let state = {
+        text: props.text
+    }
+
+    return (
+        <div>
+            {props.text}
+        </div>
+    )
+}
+
 function App() {
     const [current, send] = useMachine(machine, {
         devTools: true,
@@ -261,6 +282,7 @@ function App() {
             }),
             ttsStart: asEffect((context) => {
                 /* console.log(context) */
+                question = context.ttsAgenda
                 const utterance = new context.ttsUtterance(context.ttsAgenda);
                 console.log("S>", context.ttsAgenda)
                 utterance.voice = context.voice
@@ -316,12 +338,20 @@ function App() {
         default:
             return (
                 <div className="App">
-                    <ReactiveButton state={current} alternative={{}} onClick={() => send('CLICK')} />
-                    <div className="select-wrapper">
-                        <div className="select">
-                            {figureButtons}
+                    <div>
+                        <ReactiveButton state={current} alternative={{}} onClick={() => send('CLICK')}/>
+                        <div className="select-wrapper">
+                            <div className="select">
+                                {figureButtons}
+                            </div>
                         </div>
                     </div>
+                    <div className="center">
+                        <TextDisplay text={question}></TextDisplay></div>
+                    <div className="center">
+                        <TextDisplay text={answer}></TextDisplay>
+                    </div>
+
                 </div>
             )
     }
