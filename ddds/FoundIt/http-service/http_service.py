@@ -192,7 +192,7 @@ def get_data(location, query):
     search = GoogleSearch(params)
     results = search.get_dict()
 
-    try :            
+    try :
         jobs = results["jobs_results"]
         data = {}
         try :
@@ -211,6 +211,7 @@ def get_data(location, query):
             #listToStr2 = ' '.join([str(elem) for elem in str_result2])+
             #answer = listToStr0 + listToStr1 + listToStr2
             answer = listToStr0
+            
             return answer
         
         except IndexError:

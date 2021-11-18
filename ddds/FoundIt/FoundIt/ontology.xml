@@ -16,10 +16,80 @@
     <predicate name="job_seeker" sort="string"/>
     <action name="job_application"/>
 
-    <individual name="field_entries" sort="field"/>
-    <individual name="country_entries" sort="country"/>
-    <individual name="city_entries" sort="city"/>
-    <individual name="contract_entries" sort="contract"/>
-    <individual name="extra_info_entries" sort="extra_info"/>
+    <individual name="field_computer" sort="field"/>
+    <individual name="field_electrical" sort="field"/>
+    <individual name="field_chemistry" sort="field"/>
+    <individual name="field_biology" sort="field"/>
+    <individual name="field_programmer" sort="field"/>
+    <individual name="field_linguistics" sort="field"/>
+    <individual name="field_computational" sort="field"/>
+    <individual name="field_software" sort="field"/>
+    <individual name="field_translator" sort="field"/>
+    <individual name="field_it" sort="field"/>
+    <individual name="field_frontend" sort="field"/>
+    <individual name="field_developer" sort="field"/>
+    <individual name="field_data" sort="field"/>
+    <individual name="field_human" sort="field"/>
+    <individual name="field_professor" sort="field"/>
+    <individual name="field_logic" sort="field"/>
+    <individual name="field_environment" sort="field"/>
+    <individual name="field_civil" sort="field"/>
+    <individual name="field_seller" sort="field"/>
+    <individual name="field_cook" sort="field"/>
+    <individual name="field_accountant" sort="field"/>
+    <individual name="field_manager" sort="field"/>
+    <individual name="field_senior" sort="field"/>
+    <individual name="field_junior" sort="field"/>
+    <individual name="field_ceo" sort="field"/>
+
+    <individual name="country_uk" sort="country"/>
+    <individual name="country_france" sort="country"/>
+    <individual name="country_spain" sort="country"/>
+    <individual name="country_germany" sort="country"/>
+    <individual name="country_sweden" sort="country"/>
+    <individual name="country_usa" sort="country"/>
+    <individual name="country_italy" sort="country"/>
+    <individual name="country_belgium" sort="country"/>
+    <individual name="country_canada" sort="country"/>
+    <individual name="country_norway" sort="country"/>
+    <individual name="country_finland" sort="country"/>
+    <individual name="country_iran" sort="country"/>
+    <individual name="country_netherlands" sort="country"/>
+    <individual name="country_syria" sort="country"/>
+    <individual name="country_australia" sort="country"/>
+    <individual name="country_japan" sort="country"/>
+    <individual name="country_china" sort="country"/>
+    <individual name="country_uae" sort="country"/>
+    <individual name="country_korea" sort="country"/>
+    <individual name="country_russia" sort="country"/>
+
+    <individual name="city_london" sort="city"/>
+    <individual name="city_paris" sort="city"/>
+    <individual name="city_madrid" sort="city"/>
+    <individual name="city_berlin" sort="city"/>
+    <individual name="city_goteborg" sort="city"/>
+    <individual name="city_stockholm" sort="city"/>
+    <individual name="city_newyork" sort="city"/>
+    <individual name="city_aboudabi" sort="city"/>
+    <individual name="city_damascus" sort="city"/>
+    <individual name="city_tehran" sort="city"/>
+    <individual name="city_beijing" sort="city"/>
+    <individual name="city_ottawa" sort="city"/>
+    <individual name="city_washington" sort="city"/>
+    <individual name="city_seoul" sort="city"/>
+    <individual name="city_oslo" sort="city"/>
+    <individual name="city_canberra" sort="city"/>
+    <individual name="city_tokyo" sort="city"/>
+    <individual name="city_rome" sort="city"/>
+    <individual name="city_amsterdam" sort="city"/>
+    <individual name="city_helsinki" sort="city"/>
+    <individual name="city_melbourne" sort="city"/>
+    <individual name="city_dubai" sort="city"/>
+    <individual name="city_miami" sort="city"/>
+    <individual name="city_Moscow" sort="city"/>
+
+    <individual name="contract_long" sort="contract"/>
+    <individual name="contract_short" sort="contract"/>
+    <individual name="extra_info_to_search_remote" sort="extra_info"/>
 
 </ontology>

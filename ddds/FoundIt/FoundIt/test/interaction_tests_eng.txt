@@ -12,7 +12,7 @@ S> In which city?
 U> Göteborg
 S> What kind of contract would you prefer?
 U> internship
-S> Found It! Here are the best job opportunities I found for you. *
+S> Found It!.. Here is the best job opportunity for you. *
 
 --- Trying dynamic value 1
 S> What would you like to do?
@@ -25,7 +25,7 @@ S> In which city?
 U> Amsterdam
 S> What kind of contract would you prefer?
 U> full time
-S> Found It! Here are the best job opportunities I found for you. *
+S> Found It!.. Here is the best job opportunity for you. *
 
 --- Trying dynamic value 2
 S> What would you like to do?
@@ -38,7 +38,7 @@ S> In which city?
 U> Las Vegas
 S> What kind of contract would you prefer?
 U> temporary
-S> Found It! Here are the best job opportunities I found for you. *
+S> Found It!.. Here is the best job opportunity for you. *
 
 --- Trying dynamic value 3
 S> What would you like to do?
@@ -51,7 +51,7 @@ S> In which city?
 U> Tehran
 S> What kind of contract would you prefer?
 U> full time
-S> Found It! Here are the best job opportunities I found for you. *
+S> Found It!.. Here is the best job opportunity for you. *
 
 --- job seeker (incremental)
 S> What would you like to do?
@@ -64,7 +64,7 @@ S> In which city?
 U> Ottawa
 S> What kind of contract would you prefer?
 U> full time
-S> Found It! Here are the best job opportunities I found for you. *
+S> Found It!.. Here is the best job opportunity for you. *
 
 --- job seeker (over answering)
 S> What would you like to do?
@@ -73,14 +73,14 @@ S> In which country?
 U> France
 S> In which city?
 U> Paris  
-S> Found It! Here are the best job opportunities I found for you. *
+S> Found It!.. Here is the best job opportunity for you. *
 
 --- job seeker (one-shot) impossible
 S> What would you like to do?
 U> I want a full time contract in electrical engineering in Berlin
 S> In which country?
 U> Germany
-S> Found It! Here are the best job opportunities I found for you. *
+S> Found It!.. Here is the best job opportunity for you. *
 
 --- extra info (incremental)
 S> What would you like to do?
@@ -93,4 +93,4 @@ S> In which city?
 U> New York
 S> What kind of contract would you prefer?
 U> permanent
-S> Found It! Here are the best job opportunities I found for you.*
+S> Found It!.. Here is the best job opportunity for you. *
